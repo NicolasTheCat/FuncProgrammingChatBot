@@ -1,0 +1,171 @@
+:root {
+  --main-bg-color: #0d0d0d;
+  --main-bg-hover-color: #242424;
+  --secondary-bg-color: #2c2a3d;
+  --tertiary-bg-color: #363535;
+
+  --accent-color: #06435d;
+  --highlight-color: #0d7cac;
+  --warning-color: #600202;
+  --warning-h-color: #bd0505;
+
+  --main-text-color: #1f769f;
+  --secondary-text-color: #1c5670;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--main-bg-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  color: var(--main-text-color);
+}
+
+#mainContainer {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: var(--main-bg-color);
+}
+
+#botListContainer {
+  width: 20%;
+  padding: 10px;
+  border-right: 1px solid var(--accent-color);
+  overflow-y: auto;
+}
+
+#contactList {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contactItem {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+  background-color: var(--main-bg-color);
+  border: 1px solid var(--accent-color);
+  border-radius: 15px;
+  padding: 5px;
+  margin: 5px 0;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.contactItem:hover {
+  background-color: var(--main-bg-hover-color);
+}
+
+.contactAvatar {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  margin: 0px 10px;
+  background-color: white;
+}
+
+#chatContainer {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+
+#chatBox {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  border-bottom: 1px solid var(--accent-color);
+}
+
+.message-container {
+  display: flex;
+  margin: 10px 0;
+  align-items: center;
+}
+
+.message-container.user-message {
+  justify-content: flex-end;
+}
+
+.message-container.bot-message {
+  justify-content: flex-start;
+}
+
+.message {
+  margin: 0 10px;
+  padding: 10px;
+  border-radius: 5px;
+  max-width: 80%;
+}
+
+.user-message .message {
+  background-color: var(--secondary-bg-color);
+}
+
+.bot-message .message {
+  background-color: var(--tertiary-bg-color);
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: white;
+}
+
+.message-info {
+  font-size: 12px;
+  color: var(--secondary-text-color);
+  margin-bottom: 5px;
+}
+
+#inputContainer {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid var(--accent-color);
+}
+
+#messageInput {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 15px;
+  background-color: var(--main-bg-color);
+  color: var(--highlight-color);
+}
+
+#sendButton {
+  padding: 10px 20px;
+  margin-left: 10px;
+  border: 1px solid var(--accent-color);
+  border-radius: 15px 0 0 15px;
+  background-color: var(--main-bg-color);
+  color: var(--highlight-color);
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#sendButton:hover {
+  background-color: var(--highlight-color);
+  color: #fff;
+}
+
+#clearButton {
+  padding: 10px 20px;
+  background-color: var(--main-bg-color);
+  color: var(--warning-h-color);
+  border: 1px solid var(--warning-color);
+  border-radius: 0 15px 15px 0;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+#clearButton:hover {
+  background-color: var(--warning-h-color);
+  color: #fff;
+}
